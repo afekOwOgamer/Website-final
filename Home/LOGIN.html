@@ -1,0 +1,151 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Register</title>
+    <link rel="stylesheet" href="../StyleSheet.css">
+    <script>
+        var check = function () {
+            if (document.getElementById('password').value == document.getElementById('confirm').value) {
+                document.getElementById('password').style.borderColor = 'green';
+                document.getElementById('confirm').style.borderColor = 'green';
+                valid();
+
+            } else {
+                document.getElementById('password').style.borderColor = 'red';
+                document.getElementById('confirm').style.borderColor = 'red';
+                valid();
+            }
+        }
+
+        var usernamerequire = function () {
+            if ((document.getElementById('user').value).length < 3) {
+                document.getElementById('usernameRequire').hidden = false;
+                valid();
+            }
+            else {
+                document.getElementById('usernameRequire').hidden = true;
+                valid();
+            }
+        }
+
+        var namerequire = function () {
+            if ((document.getElementById('name').value).length < 2) {
+                document.getElementById('nameRequire').hidden = false;
+                valid();
+            }
+            else {
+                document.getElementById('nameRequire').hidden = true;
+                valid();
+            }
+        }
+
+        var valid = function () {
+            if (document.getElementById('password').value == document.getElementById('confirm').value
+                && (document.getElementById('user').value).length >= 3
+                && (document.getElementById('name').value).length >= 2) {
+                document.getElementById("submit_button").disabled = false;
+            }
+            else {
+                document.getElementById("submit_button").disabled = true;
+            }
+        }
+    </script>
+</head>
+<body>
+    <a href="../index.html"><img src="Links/ToHome.png" id="toHome" /></a>
+    <div id="body">
+        <h1 class="titleBox">Register form</h1>
+        <form class="textBox" method="POST" action="CONGRATULATIONS.html">
+            <p style="width: 66vw"></p>
+            <div class="login">
+                <label for="name"><b>Name</b><span>*</span></label> <br />
+                <input type="text" name="name" id="name" required="required" aria-required="true" placeholder="Enter your first name" onkeyup="namerequire();">
+                <p id="nameRequire">Name must be longer then 2 letters</p>
+            </div>
+            <div class="clearfix"></div>
+            <div class="login">
+                <label for="familiy"><b>Family</b><span>*</span></label> <br />
+                <input type="text" name="familiy" id="familiy" required="required" aria-required="true" placeholder="Enter your last name">
+            </div>
+            <div class="clearfix"></div>
+            <div class="login">
+                <label for="birth"><b>Birthdate</b></label> <br />
+                <input type="date" name="birth" id="birth">
+            </div>
+            <div class="clearfix"></div>
+            <div class="login">
+                <label for="gender"><b>Gender</b></label> <br />
+                <div>
+                    <div>
+                        <input name="gender" id="gender-0" type="radio" checked="checked">
+                        <label for="gender-0">Male</label> <br />
+                    </div>
+                    <div>
+                        <input name="gender" id="gender-1" type="radio">
+                        <label for="gender-1">Female</label> <br />
+                    </div>
+                    <div>
+                        <input name="gender" id="gender-other" value="" type="radio">
+                        <label for="gender-other">
+                            Other
+                            <br />
+                            <input type="text" id="gender-other-value" placeholder="Other">
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="login">
+                <label for="email"><b>Email</b></label><br />
+                <input type="email" name="email" id="email" placeholder="Email@address.com">
+            </div>
+            <div class="clearfix"></div>
+            <div class="login">
+                <label for="number"><b>Phone number</b></label><br />
+                <input type="tel" name="number" id="number" placeholder="050-1234567" pattern="[0-9]{3}-[0-9]{7}">
+            </div>
+            <div class="clearfix"></div>
+            <div class="login">
+                <label for="city"><b>City</b></label><br />
+                <select name="city" id="city">
+                    <option value="jerusalem" selected="selected" id="city-0">Jerusalem</option>
+                    <option value="tel_aviv" id="city-1">Tel Aviv</option>
+                    <option value="Haifa" id="city-2">Haifa</option>
+                    <option value="petah_tikva" id="city-3">Petah Tikva</option>
+                    <option value="ashdod" id="city-4">Ashdod</option>
+                    <option value="netanya" id="city-5">Netanya</option>
+                    <option value="rishon_leZiyyon" id="city-6">Rishon LeZiyyon</option>
+                    <option value="bnei_brak" id="city-7">Bnei Brak</option>
+                    <option value="holon" id="city-8">Holon</option>
+                    <option value="beersheba" id="city-9">Beersheba</option>
+                    <option value="ramat_gan" id="city-10">Ramat Gan</option>
+                    <option value="ashqelon" id="city-11">Ashqelon</option>
+                </select>
+            </div>
+            <h3 class="titleBox">Account</h3>
+            <div class="login">
+                <label for="user"><b>Username</b><span>*</span></label><br />
+                <input type="text" name="user" id="user" required="required" aria-required="true" placeholder="Enter Username" onkeyup="usernamerequire();">
+                <p id="usernameRequire">Username must be longer then 3 letters</p>
+            </div>
+            <div class="clearfix"></div>
+            <div class="login">
+                <label for="password"><b>Password</b><span>*</span></label><br />
+                <input type="password" name="password" id="password" required="required" aria-required="true" placeholder="Enter Password" onkeyup="check();">
+            </div>
+            <div class="login">
+                <label for="confirm"><b>Confirm</b><span>*</span></label><br />
+                <input type="password" name="confirm" id="confirm" required="required" aria-required="true" placeholder="Confirm Password" onkeyup="check();">
+            </div>
+            <div class="clearfix"></div>
+            <div class="login">
+                <label for="description"><b>Description</b></label><br />
+                <textarea type="textarea" name="description" id="description"></textarea>
+            </div>
+            <button type="submit" id="submit_button" disabled><b>Submit</b></button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,198 @@
+﻿.leftImage {
+    float: left;
+    direction: ltr;
+    background-color: darkgreen;
+    width: 98%;
+    padding-right: 1%;
+    padding-left: 1%;
+    padding-bottom: 1%
+}
+.rightImage {
+    float: right;
+    direction: rtl;
+    background-color: darkolivegreen;
+    width: 98%;
+    padding-right: 1%;
+    padding-left: 1%;
+    padding-bottom: 1%
+}
+.clearfix {
+            clear: both;
+            border-bottom: 3px solid black;
+            width: 100%;
+}
+#body {
+    display: inline-block;
+    border-left: 10px solid black;
+    border-right: 10px solid black;
+    margin-right: 15%;
+    margin-left: 15%;
+    height: 100%;
+    margin-block: 0px
+}
+.titleBox {
+    background-color: forestgreen;
+    margin: 0;
+    text-align: center;
+    border-block: 3px solid black;
+    display: inline-block;
+    width: 100%;
+}
+
+.textBox {
+    background-color: darkseagreen;
+    margin: 0;
+    padding-block: 10px;
+    display: inline-block;
+    width: 100%;
+}
+
+.navBar {
+    position: absolute;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    background-color: forestgreen;
+    width: 15%;
+    list-style-type: none;
+}
+
+#pageBar {
+    right:0;
+}
+
+li a {
+    position: relative;
+    display: inline-block;
+    color: black;
+    padding-block: 15px;
+    border-block-end: 3px solid black;
+    text-align: center;
+    text-decoration: none;
+    font-family: "Lucida Console";
+    width: 100%;
+}
+
+    li a:hover {
+        background-color: #555;
+        color: white;
+    }
+
+body {
+    padding: 0;
+    margin: 0;
+    background-image: url("background.jpg");
+}
+
+.img {
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 20%;
+    border: 3px;
+}
+
+td {
+    width: 4%;
+    border-left: 3px solid white;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+td a {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    font-family: "Lucida Console";
+}
+
+
+.container {
+    position: relative;
+    float: left;
+    width: 250px;
+    padding: 7%;
+    height: 69.9vh;
+}
+
+.image {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    border: 2px solid black;
+}
+
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-decoration: none;
+    font-family: "Lucida Console";
+    text-decoration-line: overline underline;
+    text-decoration-color: forestgreen;
+    text-decoration-thickness: 2px;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.container:hover .image {
+    opacity: 0.3;
+}
+
+.container:hover .middle {
+    opacity: 1;
+}
+
+.login {
+    padding-block:3% ;
+    padding-left: 5%;
+}
+
+input, textarea {
+    width: 90%;
+    font-size: 12pt;
+    padding: 12px 20px;
+    margin: 8px;
+    border: 3px solid;
+    box-sizing: border-box;
+}
+
+#submit_button {
+    background-color: darkgreen;
+    color: sandybrown;
+    padding-block: 12px;
+    border-block: 2px solid black;
+    cursor: pointer;
+    width: 100%;
+}
+    button:hover {
+        opacity: 0.9;
+    }
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+input[type=radio] {
+    padding: 0;
+    margin: 0;
+    width: 5%;
+}
+
+#toHome {
+    position: absolute;
+    display: inline-block;
+    margin: 0;
+    padding-left: 3.75%;
+    width: 7.5%;
+}
+#congratulations {
+    height: 95vh;
+    width: 68.5vw;
+    text-align:center
+}
